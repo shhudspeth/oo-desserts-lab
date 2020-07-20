@@ -46,6 +46,18 @@ class Cupcake:
         else:
             print("Sorry, that cupcake doesn't exist")
 
+
+class Brownie (Cupcake):
+    def __init__(self, name, price):
+        super().__init__(name, "chocolate", price)
+
+
+    def __repr__(self):
+        """Human-readable printout for debugging."""
+
+        return f'<Brownie name="{self.name}" qty={self.qty}>'
+
+
 if __name__ == '__main__':
     import doctest
 
